@@ -1,0 +1,180 @@
+\documentclass[journal,12pt,twocolumn]{IEEEtran}
+
+\usepackage{setspace}
+\usepackage{gensymb}
+\singlespacing
+\usepackage[cmex10]{amsmath}
+
+\usepackage{amsthm}
+
+\usepackage{mathrsfs}
+\usepackage{txfonts}
+\usepackage{stfloats}
+\usepackage{bm}
+\usepackage{cite}
+\usepackage{cases}
+\usepackage{subfig}
+
+\usepackage{longtable}
+\usepackage{multirow}
+
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{steinmetz}
+\usepackage{tikz}
+\usepackage{circuitikz}
+\usepackage{verbatim}
+\usepackage{tfrupee}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{graphicx}
+\usepackage{tkz-euclide}
+
+\usetikzlibrary{calc,math}
+\usepackage{listings}
+    \usepackage{color}                                            %%
+    \usepackage{array}                                            %%
+    \usepackage{longtable}                                        %%
+    \usepackage{calc}                                             %%
+    \usepackage{multirow}                                         %%
+    \usepackage{hhline}                                           %%
+    \usepackage{ifthen}                                           %%
+    \usepackage{lscape}     
+\usepackage{multicol}
+\usepackage{chngcntr}
+
+\DeclareMathOperator*{\Res}{Res}
+
+\renewcommand\thesection{\arabic{section}}
+\renewcommand\thesubsection{\thesection.\arabic{subsection}}
+\renewcommand\thesubsubsection{\thesubsection.\arabic{subsubsection}}
+
+\renewcommand\thesectiondis{\arabic{section}}
+\renewcommand\thesubsectiondis{\thesectiondis.\arabic{subsection}}
+\renewcommand\thesubsubsectiondis{\thesubsectiondis.\arabic{subsubsection}}
+
+
+\hyphenation{op-tical net-works semi-conduc-tor}
+\def\inputGnumericTable{}                                 %%
+
+\lstset{
+%language=C,
+frame=single, 
+breaklines=true,
+columns=fullflexible
+}
+\begin{document}
+
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{example}{Example}[section]
+\newtheorem{definition}[problem]{Definition}
+
+\newcommand{\BEQA}{\begin{eqnarray}}
+\newcommand{\EEQA}{\end{eqnarray}}
+\newcommand{\define}{\stackrel{\triangle}{=}}
+\bibliographystyle{IEEEtran}
+\raggedbottom
+\setlength{\parindent}{0pt}
+\providecommand{\mbf}{\mathbf}
+\providecommand{\pr}[1]{\ensuremath{\Pr\left(#1\right)}}
+\providecommand{\qfunc}[1]{\ensuremath{Q\left(#1\right)}}
+\providecommand{\sbrak}[1]{\ensuremath{{}\left[#1\right]}}
+\providecommand{\lsbrak}[1]{\ensuremath{{}\left[#1\right.}}
+\providecommand{\rsbrak}[1]{\ensuremath{{}\left.#1\right]}}
+\providecommand{\brak}[1]{\ensuremath{\left(#1\right)}}
+\providecommand{\lbrak}[1]{\ensuremath{\left(#1\right.}}
+\providecommand{\rbrak}[1]{\ensuremath{\left.#1\right)}}
+\providecommand{\cbrak}[1]{\ensuremath{\left\{#1\right\}}}
+\providecommand{\lcbrak}[1]{\ensuremath{\left\{#1\right.}}
+\providecommand{\rcbrak}[1]{\ensuremath{\left.#1\right\}}}
+\theoremstyle{remark}
+\newtheorem{rem}{Remark}
+\newcommand{\sgn}{\mathop{\mathrm{sgn}}}
+\providecommand{\abs}[1]{\left\vert#1\right\vert}
+\providecommand{\res}[1]{\Res\displaylimits_{#1}} 
+\providecommand{\norm}[1]{\left\lVert#1\right\rVert}
+%\providecommand{\norm}[1]{\lVert#1\rVert}
+\providecommand{\mtx}[1]{\mathbf{#1}}
+\providecommand{\mean}[1]{E\left[ #1 \right]}
+\providecommand{\fourier}{\overset{\mathcal{F}}{ \rightleftharpoons}}
+%\providecommand{\hilbert}{\overset{\mathcal{H}}{ \rightleftharpoons}}
+\providecommand{\system}{\overset{\mathcal{H}}{ \longleftrightarrow}}
+	%\newcommand{\solution}[2]{\textbf{Solution:}{#1}}
+\newcommand{\solution}{\noindent \textbf{Solution: }}
+\newcommand{\cosec}{\,\text{cosec}\,}
+\providecommand{\dec}[2]{\ensuremath{\overset{#1}{\underset{#2}{\gtrless}}}}
+\newcommand{\myvec}[1]{\ensuremath{\begin{pmatrix}#1\end{pmatrix}}}
+\newcommand{\mydet}[1]{\ensuremath{\begin{vmatrix}#1\end{vmatrix}}}
+\numberwithin{equation}{subsection}
+
+\makeatletter
+\@addtoreset{figure}{problem}
+\makeatother
+\let\StandardTheFigure\thefigure
+\let\vec\mathbf
+
+\renewcommand{\thefigure}{\theproblem}
+
+\def\putbox#1#2#3{\makebox[0in][l]{\makebox[#1][l]{}\raisebox{\baselineskip}[0in][0in]{\raisebox{#2}[0in][0in]{#3}}}}
+     \def\rightbox#1{\makebox[0in][r]{#1}}
+     \def\centbox#1{\makebox[0in]{#1}}
+     \def\topbox#1{\raisebox{-\baselineskip}[0in][0in]{#1}}
+     \def\midbox#1{\raisebox{-0.5\baselineskip}[0in][0in]{#1}}
+\vspace{3cm}
+\title{Assignment 1}
+\author{S Prithvi \\ CE20RESCH13001}
+\maketitle
+\newpage
+\bigskip
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+\section*{Problem II (2\Large{i})}
+Find the distance between points (7,6) and (4,5) with the axes at 60^{\circ}
+\section{Solution}
+Let the points be $P_1$ (7,6) and $P_2$ (4,5) and also the angle between axes is $60^{\circ}$
+\begin{align}
+\vec{P_1} = \ \myvec{4 \\5} \ ; \ \vec{P_2} \ = \myvec{7\\ 6}
+\end{align}
+The problem can be solved by transformation of the given coordinate system to the rectangular coordinate system.\\
+In order to convert to rectangular coordinate system, the y-axis should be rotated by $30^{\circ}$ in anti-clockwise and x-axis will remain unaltered.\\
+Let the projections of points $P_1$ and $P_2$ on x-axis and y-axis of angular axes be $X_1$,$X_2$ and $Y_1$,$Y_2$ respectively.\\
+Let x\&y ordinates of the points $P_1$ \& $P_2$ on rectangular axes be $X_3$,$X_4$ \& $Y_3$,$Y_4$ respectively.\\
+From the Fig1, \angle$P_1$$X_1$$X_3$ = \angle$P_2$$X_2$$X_4$ = $60^{\circ}$ and \angle$Y_1$$O$$Y_3$ = \angle$Y_2$$O$$Y_4$ = $30^{\circ}$.\\
+O$X_3$ = O$X_1$ + $X_1$$X_3$ = 4+$X_1$$P_1$$\cos{60^{\circ}$$ = 4+5(\frac{1}{2}) = \frac{13}{2}\\
+O$X_4$ = O$X_2$ + $X_2$$X_4$ = 7+$X_2$$P_2$$\cos{60^{\circ}$$ = 7+6(\frac{1}{2}) = 10\\
+O$Y_3$ = O$Y_1$$\cos{30^{\circ}$$  = \frac{5\sqrt{3}}{2}}\\
+O$Y_4$ = O$Y_2$$\cos{30^{\circ}$$  = \frac{6\sqrt{3}}{2}} = $3\sqrt{3}$\\
+The transformed coordinates of points $P_1$,$P_2$ are as follows,\\
+ $\vec{P_1}$ = \myvec{\frac{13}{2}\\\frac{5\sqrt{3}}{2}};$\vec{P_2}$ = \myvec{10\\3\sqrt{3}} \\
+Now, obtained points are in the rectangular coordinate system and the distance vector between points will be$\\  \vec{P_1_2}  = \ \vec{P_2} - \vec{P_1} \ = \myvec{10\\3\sqrt{3}} - \myvec{\frac{13}{2}\\\frac{5\sqrt{3}}{2}} = \myvec{\frac{7}{2}\\\frac{\sqrt{3}}{2}}\\  $and the magnitude will be$\  \norm{\vec{P_2} - \vec{P_1}}\\
+$Therefore, the distance between the points is equal to $ \  \sqrt{13} \  units$\\
+\\
+\\
+\\
+\begin{figure}[!ht]
+	\centering
+	\includegraphics[width=\columnwidth]{fig1.png}
+	\caption*{}
+	\label*{Fig1: Points defined on angular \& rectangular axes }
+\end{figure}
+\begin{figure}[!hbt]
+    \centering
+    \includegraphics[width=\columnwidth]{download.png}
+    \caption*{}
+    \label*{Fig2: Points plotted in Python}
+\end{figure}
+
+
+
+
+
+
+\end{document}
+*Python code file
+\begin{lstlisting}
+https://github.com/Prithvi-Sangani/SM5083_Assignment1/blob/main/Assignment1.ipynb
+\end{lstlisting}
